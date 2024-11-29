@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GB18030">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+<body>
+    <!-- border用于生成框线 -->
+    <table border="1">
+        <thead>
+        <!-- 有几行就有几个tr，有几列就用几个th -->
+            <tr>
+                <th>姓名</th>
+                <th>语文</th>
+                <th>数学</th>
+                <th>总分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>100</td>
+                <!-- 不能跨结构合并单元格，如thead和tbody不可以合并 -->
+                <!-- rowspan用于把上下几个单元格合并，在第一个单元格处写rowspan，数字表示有几个单元格要合并 -->
+                <td rowspan="2">100</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>100</td>
+                <!-- <td>100</td> -->
+                <td>200</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <!-- colspan用于左右几个单元格合并在一起 -->
+                <td colspan="3">满分</td> 
+                <!-- <td>满分</td>
+                <td>满分</td> -->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
